@@ -15,13 +15,17 @@
                     <div class="nav-icon">
                         <img src="./assets/Yasya23.png" alt="logo">
                     </div>
-                    <div class="nav-options">
+                    <div id="nav-options" class="nav-options">
                         <ul>
-                            <li>HOME</li>
-                            <li>ABOUT</li>
-                            <li>EVENTS</li>
-                            <li>CONTACT</li>
+                            <li><a href="#">HOME</a></li>
+                            <li><a href="#about">ABOUT</a></li>
+                            <li><a href="">EVENTS</a></li>
+                            <li><a href="">CONTACT</a></li>
                         </ul>
+                    </div>
+                    <div id="nav-hamb-icon" class="nav-hamb-icon" onclick="navBar()">
+                        <img id="nav-hamb-img" src="./assets/bars-solid.svg" alt="logo">
+                        <button class="nav-toggle" aria-label="Open navigation menu"><span></span></button>
                     </div>
                 </div>
             </nav>
@@ -45,10 +49,18 @@
             <div class="about-container">
                 <img class="logo-light" src="./assets/logo-white.png" alt="">
                 <h2>About</h2>
+                <p>
+                    The annual cultural event "YASYA" is proudly presented by St. Thomas Institute for Science and Technology.
+                    
+                    In 2015, YASYA had its inception as an intra-college event. It then advanced to an inter-college cultural meet in 2017, follwing its humble beginnings. During the period between 2017 and 2019, Yasya became embellished with various splendid events that integrated and motivated the diverse shades of culture and art.
+                    <br><br>
+                    The success of these events can be attributed to the audience, and Yasya has been fortunate enough to have sppport of more than 50,000 people cheering it on.
+                    </p>
             </div>
         </section>
     </main>
 
     <script src="./js/countdown.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>

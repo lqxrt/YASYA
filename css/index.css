@@ -1,0 +1,126 @@
+@font-face {
+  font-family: Stargaze;
+  src: url(../font/Stargaze.woff) format(woff);
+}
+@font-face {
+  font-family: Stentiga;
+  src: url(../font/stentiga.woff) format(woff);
+}
+@font-face {
+  font-family: Nexa-sans;
+  src: url(../font/nexa-rust.sans-black.otf) format(woff);
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+
+a, a:hover, a:focus {
+  text-decoration: none;
+}
+
+ul, li {
+  list-style: none;
+}
+
+nav {
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  background-color: rgba(25, 23, 23, 0.8);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-container .nav-icon img {
+  width: 10rem;
+}
+.nav-container .nav-options ul {
+  display: flex;
+  gap: 20px;
+}
+.nav-container .nav-options li {
+  color: white;
+  font-family: Nexa-sans;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+.nav-container .nav-options li:hover {
+  color: rgb(255, 200, 0);
+}
+
+.banner {
+  height: 100vh;
+  background-image: url(../assets/banner.jpg);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner .banner-container {
+  width: auto;
+  display: flex;
+  justify-content: center;
+}
+.banner .banner-container .banner-logo {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.banner .banner-container .banner-logo img {
+  max-width: 70%;
+  height: auto;
+  margin-right: 20px;
+}
+.banner .banner-container .banner-content {
+  display: flex;
+  align-items: center;
+}
+.banner .banner-container .banner-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.countdown-container {
+  background-color: #922f20;
+  padding: 20px;
+  color: white;
+  font-family: Nexa-sans;
+  letter-spacing: 2px;
+  font-size: 30px;
+  text-align: center;
+}
+
+#about {
+  height: 100vh;
+  background-color: #0b0301;
+  position: relative;
+}
+#about .about-container {
+  max-width: 1200px;
+  margin: auto;
+}
+#about .about-container .logo-light {
+  position: absolute;
+  width: 40%;
+  left: -120px;
+  top: 50px;
+  opacity: 0.15;
+}
+#about .about-container h2 {
+  text-align: center;
+  color: white;
+  padding: 40px;
+  font-size: 2rem;
+  font-family: Nexa-sans;
+  letter-spacing: 2px;
+}/*# sourceMappingURL=index.css.map */

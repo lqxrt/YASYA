@@ -29,6 +29,9 @@ a,a:hover,a:focus{
 ul,li{
     list-style: none;
 }
+body{
+    height: max-content;
+}
 main{
     scroll-behavior:smooth;
     scroll-snap-type: y mandatory;
@@ -142,13 +145,50 @@ nav{
 }
 
 .countdown-container{
-    background-color: #922f20;
+    background-color: #a53827;
     padding: 20px;
     color: white;
     font-family: Nexa-sans ;
     letter-spacing: 2px;
     font-size: 30px;
-    text-align: center;
+    display: flex ;
+    justify-content: center;
+    #countdown{
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        .countdown {
+            display: flex;
+            justify-content: space-between;
+            .box {
+                margin: 0 10px;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+              }
+              
+              .number {
+                width: 6rem;
+                height: 6rem;
+                font-size: 48px;
+                font-weight: bold;
+                background-color: #bd4b3a;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 10px;
+                box-shadow: #9e3828 0px 5px 15px;
+              }
+              
+              .label {
+                font-size: 18px;
+                font-weight: bold;
+                margin-top: 8px;
+              }
+          }
+    }    
 }
 #about{
     height: 100vh;
@@ -165,10 +205,10 @@ nav{
         justify-content: center;
         .logo-light{
             position: absolute;
-            width: 40%;
+            width: 50%;
             left: -120px;
             top: 50px;
-            opacity: 0.15;
+            opacity: 0.1;
         }
         h2{
             width: max-content;
@@ -202,21 +242,99 @@ nav{
 
 }
 
+.footer-distributed {
+    background-color: #090000;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: normal 16px Manrope;
+    padding: 45px 50px;
+    border-top: 2px solid white;
+  }
+  
+  .footer-distributed .footer-left p {
+    color: #8f9296;
+    font-size: 14px;
+    margin: 0;
+  }
+  /* Footer links */
+  
+  .footer-distributed p.footer-links {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0 0 10px;
+    padding: 0;
+    transition: ease .25s;
+  }
+  
+  .footer-distributed p.footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color: inherit;
+    transition: ease .25s;
+  }
+  
+  .footer-distributed .footer-links a:before {
+    content: "·";
+    font-size: 20px;
+    left: 0;
+    color: #fff;
+    display: inline-block;
+    padding-right: 5px;
+  }
+  
+  .footer-distributed .footer-links .link-1:before {
+    content: none;
+  }
+  
+  .footer-distributed .footer-right {
+    float: right;
+    margin-top: 6px;
+    max-width: 180px;
+  }
+  
+  .footer-distributed .footer-right a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background-color: #1d1b1b;
+    border-radius: 2px;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+    margin-left: 3px;
+    transition:all .25s;
+  }
+  
+  .footer-distributed .footer-right a:hover{transform:scale(1.1); -webkit-transform:scale(1.1);}
+  
+  .footer-distributed p.footer-links a:hover{text-decoration:underline;}
+  
+
+
 @media screen and (max-width: 768px) {
     .nav-container {
       position: relative;
       .nav-hamb-icon{
         display: block;
+        .fa{
+            color: white;
+            font-size: 25px;
+        }
         }
       .nav-options {
         height: 100vh;
         display: none;
         position: absolute;
-        top: 87px;
+        top: 80px;
         left: 0;
         width: 100%;
-        backdrop-filter: blur(5px);
-        background-color: rgba(25, 23, 23, 0.8);
+        backdrop-filter: blur(10px);
+        background-color: rgba(24, 23, 23, 0.8);
         padding: 20px;
         ul {
             display: flex;
@@ -255,13 +373,41 @@ nav{
         }
     }
     .countdown-container{
-        h1{
-            font-size: 24px;
+        #countdown{
+            .countdown {
+                  .number {
+                    width: 3.5rem;
+                    height: 3.5rem;
+                    font-size: 30px;
+                  }
+                  
+                  .label {
+                    font-size: 12px;
+                    margin-top: 4px;
+                  }
+              }
+        }    
+    }
+    #about{
+        .about-container{
+            p{
+                font-size: 18px !important;
+            }
+            .logo-light{
+                width: 90%;
+            }
         }
     }
-    .about-container{
-        p{
-            font-size: 18px !important;
-        }
-    }
+    .footer-distributed .footer-left, .footer-distributed .footer-right {
+        text-align: center;
+      }
+      .footer-distributed .footer-right {
+        float: none;
+        margin: 0 auto 20px;
+      }
+      .footer-distributed .footer-left p.footer-links {
+        line-height: 1.8;
+      }
   }
+
+  

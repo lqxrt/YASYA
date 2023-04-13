@@ -24,7 +24,8 @@
                         </ul>
                     </div>
                     <div id="nav-hamb-icon" class="nav-hamb-icon" onclick="navBar()">
-                        <img id="nav-hamb-img" src="./assets/bars-solid.svg" alt="logo">
+                        <!-- <img  src="./assets/" alt="logo"> -->
+                        <i id="nav-hamb" class="fa fa-bars" aria-hidden="true"></i>
                         <button class="nav-toggle" aria-label="Open navigation menu"><span></span></button>
                     </div>
                 </div>
@@ -44,12 +45,25 @@
             <div class="countdown-container">
                 <!-- <h1 id="countdown"></h1> -->
                 <div id="countdown">
-                    <ul>
-                      <li><span id="days"></span>days</li>
-                      <li><span id="hours"></span>Hours</li>
-                      <li><span id="minutes"></span>Minutes</li>
-                      <li><span id="seconds"></span>Seconds</li>
-                    </ul>
+                    <div class="countdown">
+                        <div class="box days">
+                          <div id="days" class="number"></div>
+                          <div class="label">Day</div>
+                        </div>
+                        <div class="box hours">
+                          <div id="hours" class="number"></div>
+                          <div class="label">Hour</div>
+                        </div>
+                        <div class="box minutes">
+                          <div id="minutes" class="number"></div>
+                          <div class="label">Min</div>
+                        </div>
+                        <div class="box seconds">
+                          <div id="seconds" class="number"></div>
+                          <div class="label">Sec</div>
+                        </div>
+                      </div>
+                      
                   </div>
             </div>
         </section>
@@ -66,8 +80,36 @@
                     </p>
             </div>
         </section>
-    </main>
+        <section>
+            <footer class="footer-distributed">
 
+                <div class="footer-right">
+    
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+    
+                </div>
+    
+                <div class="footer-left">
+    
+                    <p class="footer-links">
+                        <a class="link-1" href="#">Home</a>
+    
+                        <a href="#">About</a>
+    
+                        <a href="#">Event</a>
+    
+                        <a href="#">Contact</a>
+                    </p>
+    
+                    <p>Made buy Blah with Love</p>
+                </div>
+    
+            </footer>
+        </section>
+    </main>
+    <script src="https://kit.fontawesome.com/f4c3990f92.js" crossorigin="anonymous"></script>
     <script src="./js/countdown.js"></script>
     <script src="./js/script.js"></script>
 </body>

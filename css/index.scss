@@ -118,6 +118,7 @@ nav{
     align-items: center;
     justify-content: center;
     .background-video{
+        content: '';
         z-index: 10;
         position: absolute;
         width: 100vw;

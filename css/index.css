@@ -127,6 +127,7 @@ nav {
   justify-content: center;
 }
 .banner .background-video {
+  content: "";
   z-index: 10;
   position: absolute;
   width: 100vw;

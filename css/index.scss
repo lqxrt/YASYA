@@ -124,8 +124,7 @@ nav{
         height: 100vh;
         overflow: hidden;
         img{
-            content: '';
-            width: 100%;
+            min-height: 100vh;
         }
     }
     .banner-container{

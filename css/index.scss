@@ -118,12 +118,14 @@ nav{
     align-items: center;
     justify-content: center;
     .background-video{
-        content: '';
         z-index: 10;
         position: absolute;
         width: 100vw;
         height: 100vh;
         overflow: hidden;
+        img{
+            width: 100%;
+        }
     }
     .banner-container{
         width: auto;

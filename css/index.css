@@ -127,12 +127,14 @@ nav {
   justify-content: center;
 }
 .banner .background-video {
-  content: "";
   z-index: 10;
   position: absolute;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+}
+.banner .background-video img {
+  width: 100%;
 }
 .banner .banner-container {
   width: auto;

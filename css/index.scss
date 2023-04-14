@@ -141,11 +141,19 @@ nav{
             }
         }
     }
+    .black-shadow{
+        width: 100vw;
+        position: absolute;
+        bottom: 0;
+        height: 10rem;
+        background: rgb(0,0,0);
+        background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 82%); 
+    }
 
 }
 
 .countdown-container{
-    background-color: #a53827;
+    background-color: #000000;
     padding: 20px;
     color: white;
     font-family: Nexa-sans ;
@@ -154,12 +162,119 @@ nav{
     display: flex ;
     justify-content: center;
     #countdown{
-        width: 40%;
+        width: 50%;
         display: flex;
+        flex-flow: column;
         justify-content: center;
+        align-items: center;
+        margin-top: 5rem;
+        h1{
+            background-color: rgba(256,256,256,.03);
+            background-image: -webkit-linear-gradient(top, #111, #0c0c0c);
+            background-image: -moz-linear-gradient(top, #111, #0c0c0c);
+            background-image: -ms-linear-gradient(top, #111, #0c0c0c);
+            background-image: -o-linear-gradient(top, #111, #0c0c0c);
+            font-size: 2em;
+            text-align: center;
+            line-height: 1.4em;
+            text-transform: uppercase;
+            white-space:nowrap;
+            margin-top: 4rem;
+        }
+        span {
+            color: #000;
+            // font-family: 'Caesar Dressing', cursive;
+            text-transform: uppercase;
+            letter-spacing: -1rem;
+          }
+          
+          .fire {
+            animation: animation 1s ease-in-out infinite alternate;
+            -moz-animation: animation 1s ease-in-out infinite alternate;
+            -webkit-animation: animation 1s ease-in-out infinite alternate;
+            -o-animation: animation 1s ease-in-out infinite alternate;
+          }
+          
+          .burn {
+            animation: animation .65s ease-in-out infinite alternate;
+            -moz-animation: animation .65s ease-in-out infinite alternate;
+            -webkit-animation: animation .65s ease-in-out infinite alternate;
+            -o-animation: animation .65s ease-in-out infinite alternate;
+          }
+          
+          @keyframes animation
+          {
+          0% {text-shadow: 0 0 20px #fefcc9,
+            10px -10px 30px #feec85,
+            -20px -20px 40px #ffae34,
+            20px -40px 50px #ec760c,
+            -20px -60px 60px #cd4606,
+            0 -80px 70px #973716,
+            10px -90px 80px #451b0e;}
+          100% {text-shadow: 0 0 20px #fefcc9,
+            10px -10px 30px #fefcc9,
+            -20px -20px 40px #feec85,
+            22px -42px 60px #ffae34,
+            -22px -58px 50px #ec760c,
+            0 -82px 80px #cd4606,
+            10px -90px 80px  #973716;}
+          }
+          
+          @-moz-keyframes animation
+          {
+          0% {text-shadow: 0 0 20px #fefcc9,
+            10px -10px 30px #feec85,
+            -20px -20px 40px #ffae34,
+            20px -40px 50px #ec760c,
+            -20px -60px 60px #cd4606,
+            0 -80px 70px #973716,
+            10px -90px 80px #451b0e;}
+          100% {text-shadow: 0 0 20px #fefcc9,
+            10px -10px 30px #fefcc9,
+            -20px -20px 40px #feec85,
+            22px -42px 60px #ffae34,
+            -22px -58px 50px #ec760c,
+            0 -82px 80px #cd4606,
+            10px -90px 80px  #973716;}
+          }
+          
+          @-webkit-keyframes animation
+          {
+          0% {text-shadow: 0 0 20px #fefcc9,
+            10px -10px 30px #feec85,
+            -20px -20px 40px #ffae34,
+            20px -40px 50px #ec760c,
+            -20px -60px 60px #cd4606,
+            0 -80px 70px #973716,
+            10px -90px 80px #451b0e;}
+          100% {text-shadow: 0 0 20px #fefcc9,
+            10px -10px 30px #fefcc9,
+            -20px -20px 40px #feec85,
+            22px -42px 60px #ffae34,
+            -22px -58px 50px #ec760c,
+            0 -82px 80px #cd4606,
+            10px -90px 80px  #973716;}
+          }
+          
+          @-o-keyframes animation
+          {
+          0% {text-shadow: 0 0 20px #fefcc9,
+            10px -10px 30px #feec85,
+            -20px -20px 40px #ffae34,
+            20px -40px 50px #ec760c,
+            -20px -60px 60px #cd4606,
+            0 -80px 70px #973716,
+            10px -90px 80px #451b0e;}
+          100% {text-shadow: 0 0 20px #fefcc9,
+            10px -10px 30px #fefcc9,
+            -20px -20px 40px #feec85,
+            22px -42px 60px #ffae34,
+            -22px -58px 50px #ec760c,
+            0 -82px 80px #cd4606,
+            10px -90px 80px  #973716;}
+          }
         .countdown {
             display: flex;
-            justify-content: space-between;
             .box {
                 margin: 0 10px;
                 text-align: center;
@@ -195,7 +310,6 @@ nav{
     background-color: #0b0301;
     position: relative;
     padding: 20px;
-    overflow: hidden;
     .about-container{
         max-width: 1200px;
         height: 100vh;
@@ -245,7 +359,7 @@ nav{
 }
 #event{
     min-height: 100vh;
-    background-color: #181211;
+    background-color: #030303;
     position: relative;
     padding: 20px;
     .event-container{
@@ -424,6 +538,13 @@ nav{
     }
     .countdown-container{
         #countdown{
+            h1{
+                font-size: 70%;
+                margin-top: 10px;
+            }
+            span{
+                letter-spacing: 0;
+            }
             .countdown {
                   .number {
                     width: 3.5rem;

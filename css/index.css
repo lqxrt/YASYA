@@ -134,6 +134,7 @@ nav {
   overflow: hidden;
 }
 .banner .background-video img {
+  content: "";
   width: 100%;
 }
 .banner .banner-container {

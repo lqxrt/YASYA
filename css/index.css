@@ -245,6 +245,7 @@ nav {
   background-color: #0b0301;
   position: relative;
   padding: 20px;
+  overflow: hidden;
 }
 #about .about-container {
   max-width: 1200px;

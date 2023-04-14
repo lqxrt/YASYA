@@ -13,3 +13,21 @@ function navBar(){
         icon.className = "fa fa-bars";
       }
 }
+
+function updateBackground() {
+    if (window.innerWidth > 768) {
+      document.getElementById("back-video").innerHTML = `
+      <video poster="./assets/banner.jpg" plays inline autoplay muted loop>
+      <source src="./assets/sparks.mp4" type="video/mp4">
+      `
+    } else {
+        document.getElementById("back-video").innerHTML = `
+        <img src="./assets/ezgif.com-gif-maker.gif" alt="Background" />
+        `
+    }
+  }
+  
+
+window.addEventListener('resize', updateBackground);
+  
+updateBackground();

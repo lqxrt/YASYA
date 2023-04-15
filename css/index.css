@@ -33,9 +33,14 @@ ul, li {
   list-style: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   height: -moz-max-content;
   height: max-content;
+  background-color: #0b0301;
 }
 
 main {
@@ -183,7 +188,7 @@ nav {
   justify-content: center;
 }
 .countdown-container #countdown {
-  width: 50%;
+  width: 70%;
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -197,8 +202,8 @@ nav {
   text-align: center;
   line-height: 1.4em;
   text-transform: uppercase;
-  white-space: nowrap;
-  margin-top: 4rem;
+  margin-top: 7rem;
+  min-width: 100%;
 }
 .countdown-container #countdown span {
   color: #000;
@@ -259,7 +264,6 @@ nav {
   background-color: #0b0301;
   position: relative;
   padding: 20px;
-  overflow: hidden;
 }
 #about .about-container {
   max-width: 1200px;
@@ -310,7 +314,6 @@ nav {
 
 #event {
   min-height: 100vh;
-  background-color: #030303;
   position: relative;
   padding: 20px;
 }
@@ -348,14 +351,68 @@ nav {
   display: flex;
   flex-flow: wrap;
   justify-content: space-around;
-  background-color: red;
   margin-top: 30px;
 }
 #event .event-container .event-list .event-list-item {
-  min-width: 22rem;
+  width: 22rem;
   height: 30rem;
-  background-color: yellow;
+  background-color: white;
   margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: 0.2s ease-in;
+}
+#event .event-container .event-list .event-list-item:hover {
+  border: 1px solid rgb(255, 145, 0);
+  transform: scale(1.03);
+  transition: 0.2s ease-in;
+}
+#event .event-container .event-list .event-list-item .img-container {
+  background-color: yellow;
+  position: relative;
+}
+#event .event-container .event-list .event-list-item .img-container img {
+  width: 100%;
+  height: 100%;
+}
+#event .event-container .event-list .event-list-item .img-container .event-type {
+  position: absolute;
+  bottom: 0;
+  background-color: rgb(255, 191, 0);
+  padding: 8px 10px;
+  font-family: Manrope;
+  font-size: 13px;
+  font-weight: bold;
+}
+#event .event-container .event-list .event-list-item .event-details {
+  padding: 15px 15px 0px 15px;
+}
+#event .event-container .event-list .event-list-item h1 {
+  font-family: Manrope;
+  font-weight: 800;
+  font-size: 25px;
+  margin-bottom: 5px;
+  word-wrap: break-word;
+}
+#event .event-container .event-list .event-list-item p {
+  font-family: Manrope;
+  font-size: 14px;
+}
+#event .event-container .event-list .event-list-item .reg-btn {
+  width: 100%;
+  position: absolute;
+  background-color: rgb(255, 145, 0);
+  text-align: center;
+  padding: 12px 0;
+  color: white;
+  font-size: 16px;
+  font-family: Manrope;
+  font-weight: bold;
+  bottom: 0;
+}
+#event .event-container .event-list .event-list-item .reg-btn:hover {
+  background-color: rgb(199, 113, 0);
 }
 
 .footer-distributed {
@@ -489,9 +546,14 @@ nav {
     align-items: center;
     justify-content: center;
   }
+  .countdown-container #countdown {
+    min-width: 18rem;
+  }
   .countdown-container #countdown h1 {
-    font-size: 70%;
-    margin-top: 30px;
+    font-size: 40px;
+    word-wrap: break-word;
+    margin-top: 60px;
+    overflow-wrap: break-word;
   }
   .countdown-container #countdown span {
     letter-spacing: 0;
@@ -520,5 +582,11 @@ nav {
   }
   .footer-distributed .footer-left p.footer-links {
     line-height: 1.8;
+  }
+  #event .event-container .event-list .event-list-item {
+    width: 19rem;
+    height: -moz-max-content;
+    height: max-content;
+    padding-bottom: 70px;
   }
 }/*# sourceMappingURL=index.css.map */

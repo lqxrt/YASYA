@@ -18,7 +18,7 @@ fetch('https://opensheet.elk.sh/1pkr9AZjrWyBlnNfgdJe9I6Bd57tuyGlSaieBvZAx5TY/eve
       eventCardList += `
         <div class="event-list-item">
           <div class="img-container">
-            <img src="./assets/poster.jpg" alt="poster">
+            <img src="../assets/posters/${event.poster}" alt="poster">
             <div class="event-type">${event.type}</div>
           </div>
           <div class="event-details">
@@ -30,7 +30,6 @@ fetch('https://opensheet.elk.sh/1pkr9AZjrWyBlnNfgdJe9I6Bd57tuyGlSaieBvZAx5TY/eve
       `;
     });
 
-    console.log("this is card list :",eventCardList)
     eventList.innerHTML = eventCardList
   })
   .catch(error => console.error(error));
@@ -38,11 +37,9 @@ fetch('https://opensheet.elk.sh/1pkr9AZjrWyBlnNfgdJe9I6Bd57tuyGlSaieBvZAx5TY/eve
 
 function navBar(){
     if (navOptions.className === "nav-options") {
-        console.log("true")
         navOptions.className+= " visible"
         icon.className = "fa fa-times";
     } else {
-        console.log("false")
         navOptions.className = "nav-options"
         icon.className = "fa fa-bars";
       }

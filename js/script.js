@@ -18,7 +18,7 @@ fetch('https://opensheet.elk.sh/1pkr9AZjrWyBlnNfgdJe9I6Bd57tuyGlSaieBvZAx5TY/eve
       eventCardList += `
         <div class="event-list-item">
           <div class="img-container">
-            <img src="../assets/posters/${event.poster}" alt="poster">
+            <img src="./assets/posters/${event.poster}" alt="poster">
             <div class="event-type">${event.type}</div>
           </div>
           <div class="event-details">

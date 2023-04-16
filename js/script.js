@@ -2,6 +2,16 @@ const navOptions = document.getElementById("nav-options")
 const navHambIcon = document.getElementById("nav-hamb-icon")
 var icon = document.getElementById("nav-hamb");
 
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+window.onload = async function() {
+  await sleep(3000);
+  document.getElementById('preloader').style.display = 'none';
+};
+
+
 var eventData = []
 
 fetch('https://opensheet.elk.sh/1pkr9AZjrWyBlnNfgdJe9I6Bd57tuyGlSaieBvZAx5TY/event')

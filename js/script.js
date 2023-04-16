@@ -7,12 +7,13 @@ function sleep(ms) {
 }
 
 window.onload = async function() {
-  await sleep(3000);
+  await sleep(1000);
   document.getElementById('preloader').style.display = 'none';
 };
 
 
 var eventData = []
+var webTeamData = []
 
 fetch('https://opensheet.elk.sh/1pkr9AZjrWyBlnNfgdJe9I6Bd57tuyGlSaieBvZAx5TY/event')
   .then(response => response.json())
@@ -41,6 +42,45 @@ fetch('https://opensheet.elk.sh/1pkr9AZjrWyBlnNfgdJe9I6Bd57tuyGlSaieBvZAx5TY/eve
     });
 
     eventList.innerHTML = eventCardList
+  })
+  .catch(error => console.error(error));
+
+
+
+
+fetch('https://opensheet.elk.sh/1pkr9AZjrWyBlnNfgdJe9I6Bd57tuyGlSaieBvZAx5TY/webteam')
+  .then(response => response.json())
+  .then(data =>{
+    data.forEach(item => {
+      webTeamData.push(item);
+    });
+
+    console.log(webTeamData)
+
+    let webList = document.getElementById("webteam")
+    let webCardList = '';
+
+    webTeamData.forEach(event => {
+      webCardList += `
+                  <div class="team-card-container">
+                        <div class="team-card">
+                            <div class="profile-img-container">
+                            </div>
+                            <div class="profile-details">
+                                <div class="team-card-Name">${event.name}</div>
+                                <div class="position">- ${event.position} -</div>
+                                <div class="team-card-email">${event.email}</div>
+                                <div class="team-card-phone">${event.mobileNo}</div>
+                                <a href="${event.social}">
+                                    <div class="follow">Follow</div>
+                                </a>
+                                <img src="./assets/logo-white.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+      `;
+    });
+    webList.innerHTML = webCardList
   })
   .catch(error => console.error(error));
 

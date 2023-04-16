@@ -7,7 +7,7 @@ function sleep(ms) {
 }
 
 window.onload = async function() {
-  await sleep(1000);
+  await sleep(2000);
   document.getElementById('preloader').style.display = 'none';
 };
 

@@ -27,7 +27,7 @@ fetch('https://opensheet.elk.sh/1pkr9AZjrWyBlnNfgdJe9I6Bd57tuyGlSaieBvZAx5TY/eve
 
     eventData.forEach(event => {
       eventCardList += `
-        <div class="event-list-item">
+        <div class="event-list-item" data-aos="flip-left">
           <div class="img-container">
             <img src="./assets/posters/${event.poster}" alt="poster">
             <div class="event-type">${event.type}</div>
@@ -62,7 +62,7 @@ fetch('https://opensheet.elk.sh/1pkr9AZjrWyBlnNfgdJe9I6Bd57tuyGlSaieBvZAx5TY/web
 
     webTeamData.forEach(event => {
       webCardList += `
-                  <div class="team-card-container">
+                  <div class="team-card-container" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
                         <div class="team-card">
                             <div class="profile-img-container">
                             </div>

@@ -44,10 +44,10 @@
                     </div>
                     <div id="nav-options" class="nav-options">
                         <ul>
-                            <li><a href="#" onclick="navBar()">HOME</a></li>
-                            <li><a href="#about" onclick="navBar()">ABOUT</a></li>
-                            <li><a href="#event" onclick="navBar()">EVENTS</a></li>
-                            <li><a href="team.html" onclick="navBar()">TEAM</a></li>
+                            <li><a href="index.html">HOME</a></li>
+                            <li><a href="index.html#about">ABOUT</a></li>
+                            <li><a href="index.html#event">EVENTS</a></li>
+                            <li><a href="#">TEAM</a></li>
                             <!-- <li><a href="">CONTACT</a></li> -->
                         </ul>
                     </div>
@@ -58,78 +58,15 @@
                 </div>
             </nav>
         </section>
-        <section id="banner">
-            <div class="banner">
-                <div class="banner-container">
-                    <img class="banner-logo" src="./assets/logo.png" alt="logo">
-                    <div class="banner-content">
-                        <img class="banner-content-logo" src="./assets/Yasya23.png" alt="logo">
-                    </div>
-                </div>
-                <div class="black-shadow"></div>
-                <div id="back-video" class="background-video">
-                    <video poster="./assets/banner.jpg" plays inline autoplay muted loop>
-                    <source src="./assets/sparks.mp4" type="video/mp4">
-                </div>
-            </div>
-        </section>
-        <section>
-            <div class="countdown-container">
-                <!-- <h1 id="countdown"></h1> -->
-                <div id="countdown">
-                    <div class="countdown">
-                        <div class="box days">
-                            <div id="days" class="number"></div>
-                            <div class="label">Day</div>
-                        </div>
-                        <div class="box hours">
-                            <div id="hours" class="number"></div>
-                            <div class="label">Hour</div>
-                        </div>
-                        <div class="box minutes">
-                            <div id="minutes" class="number"></div>
-                            <div class="label">Min</div>
-                        </div>
-                        <div class="box seconds">
-                            <div id="seconds" class="number"></div>
-                            <div class="label">Sec</div>
-                        </div>
-                    </div>
-                    <h1>Until the 
-                    <span class="fire">F</span>
-                    <span class="burn">i</span>
-                    <span class="burn">r</span>
-                    <span class="fire">e</span>
-                    sets</h1>
-                </div>
-            </div>
-        </section>
-        <section id="about">
-            <div class="about-container"
-            data-aos="fade-zoom-in"
-     data-aos-easing="ease-in-back"
-     data-aos-delay="300"
-     data-aos-offset="0">
-                <img class="logo-light" src="./assets/logo-white.png" alt="">
-                <h2>About</h2>
-                <p id="about-content">
-                    The annual cultural event "YASYA" is proudly presented by St. Thomas Institute for Science and
-                    Technology.
-
-                    In 2015, YASYA had its inception as an intra-college event. It then advanced to an inter-college
-                    cultural meet in 2017, follwing its humble beginnings. During the period between 2017 and 2019,
-                    Yasya became embellished with various splendid events that integrated and motivated the diverse
-                    shades of culture and art.
-                    <br><br>
-                    The success of these events can be attributed to the audience, and Yasya has been fortunate enough
-                    to have sppport of more than 50,000 people cheering it on.
-                </p>
-            </div>
-        </section>
-        <section id="event">
-            <div class="event-container">
-                <h2>Events</h2>
-                <div id="event-list" class="event-list"></div>
+        <section id="team">
+            <div class="team-container">
+                <h2>Team</h2>
+                <h4 class="team-name">- Council -</h4>
+                <div id="council" class="team-list"></div>
+                <h4 class="team-name">- Committee -</h4>
+                <div id="committee" class="team-list"></div>
+                <h4 class="team-name">- Web Team -</h4>
+                <div id="webteam" class="team-list"></div>
             </div>
         </section>
         <section>
@@ -141,10 +78,10 @@
                 </div>
                 <div class="footer-left">
                     <p class="footer-links">
-                        <a class="link-1" href="#">Home</a>
-                        <a href="#about">About</a>
-                        <a href="#event">Event</a>
-                        <a href="team.html">Team</a>
+                        <a class="link-1" href="index.html">Home</a>
+                        <a href="index.html#about">About</a>
+                        <a href="index.html#event">Event</a>
+                        <a href="#">Team</a>
                     </p>
                     <p><i class="fa fa-copyright"></i> 2023</p>
                 </div>
@@ -153,15 +90,10 @@
     </main>
     <script src="https://kit.fontawesome.com/f4c3990f92.js" crossorigin="anonymous"></script>
     <script src="./js/countdown.js"></script>
-    <script src="./js/script.js" defer></script>
+    <script src="./js/script.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
     <script>
         AOS.init();
-        new TypeIt("#about-content",{
-            speed: 15,
-            lifeLike: false
-        }).go();
     </script>
 </body>
 

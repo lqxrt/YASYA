@@ -824,6 +824,14 @@ nav{
             flex: 0 0 80%;
         }
     }
+    
+.team-list{
+    .team-card-container{
+        .profile-details{
+            min-width: 0;
+        }
+    }
+}
   }
 
   

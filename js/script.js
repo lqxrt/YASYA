@@ -67,7 +67,7 @@ fetch('https://opensheet.elk.sh/1pkr9AZjrWyBlnNfgdJe9I6Bd57tuyGlSaieBvZAx5TY/web
                   <div class="team-card-container" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
                         <div class="team-card">
                             <div class="profile-img-container">
-                                <img src="./assets/${event.photo?event.photo:'team/placeholder.jpg'}" alt="photo">
+                                <img src="${event.photo?event.photo:'./assets/team/placeholder.jpg'}" alt="photo">
                             </div>
                             <div class="profile-details">
                                 <div class="team-card-Name">${event.name}</div>
@@ -103,7 +103,7 @@ fetch('https://opensheet.elk.sh/1pkr9AZjrWyBlnNfgdJe9I6Bd57tuyGlSaieBvZAx5TY/web
                   <div class="team-card-container" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
                         <div class="team-card">
                             <div class="profile-img-container">
-                                <img src="./assets/posters/Persona.jpg" alt="photo">
+                                <img src="${event.photo?event.photo:'./assets/team/placeholder.jpg'}" alt="photo">
                             </div>
                             <div class="profile-details">
                                 <div class="team-card-Name">${event.name}</div>
@@ -142,7 +142,7 @@ fetch('https://opensheet.elk.sh/1pkr9AZjrWyBlnNfgdJe9I6Bd57tuyGlSaieBvZAx5TY/web
                   <div class="team-card-container" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
                         <div class="team-card">
                             <div class="profile-img-container">
-                                <img src="./assets/posters/Persona.jpg" alt="photo">
+                                <img src="${event.photo?event.photo:'./assets/team/placeholder.jpg'}" alt="photo">
                             </div>
                             <div class="profile-details">
                                 <div class="team-card-Name">${event.name}</div>

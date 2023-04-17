@@ -21,15 +21,14 @@
     bottom: 0;
     background-color: #000;
     z-index: 99999;
+    display:flex ;
+    align-items:center ;
+    justify-content: center;
   }
   
   #status {
     width: 80px;
     height: 80px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
     background-image: url('../assets/loader.gif');
     background-repeat: no-repeat;
     background-position: center center;
@@ -827,8 +826,12 @@ nav{
     
 .team-list{
     .team-card-container{
+        min-height: 20rem;
         .profile-details{
-            min-width: 0;
+            min-width: 0rem !important;
+        }
+        .team-card{
+            flex-direction: column;
         }
     }
 }

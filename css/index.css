@@ -20,15 +20,14 @@
   bottom: 0;
   background-color: #000;
   z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #status {
   width: 80px;
   height: 80px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
   background-image: url("../assets/loader.gif");
   background-repeat: no-repeat;
   background-position: center center;
@@ -746,7 +745,13 @@ nav {
   .team-list .team-card-container {
     flex: 0 0 80%;
   }
+  .team-list .team-card-container {
+    min-height: 20rem;
+  }
   .team-list .team-card-container .profile-details {
-    min-width: 0;
+    min-width: 0rem !important;
+  }
+  .team-list .team-card-container .team-card {
+    flex-direction: column;
   }
 }/*# sourceMappingURL=index.css.map */

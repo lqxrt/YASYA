@@ -391,7 +391,7 @@ nav{
         p{
             margin-top:1rem;
             width: 90%;
-            text-align: center;
+            text-align: justify;
             font-size: 25px;
             color: white;
             font-family: Manrope;
@@ -551,20 +551,25 @@ nav{
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: space-around;
+    justify-content: center;
     margin-top: 30px;
+    margin-bottom: 50px;
     .team-card-container{
+        flex: 0 0 30%;
         background-color: rgb(23, 23, 22);
         border-radius: 6px;
         overflow: hidden;
-        width: 24rem;
+        // width: 24rem;
         position: relative;
         transition: all 0.3s ease-in-out;
+        height: 150px;
         &:hover{
-            .profile-img-container {
-                transform: scale(1.1);
-                transition: all 0.3s ease-in-out;
-                filter: grayscale(1);
+            .profile-img-container{
+                img{
+                    transform: scale(1.1);
+                    transition: all 0.3s ease-in-out;
+                    filter: grayscale(1);
+                }
             }
         }
         .team-card{
@@ -574,24 +579,43 @@ nav{
             transition: all 0.3s ease-in-out;
             position: relative;
             .profile-img-container{
-                width: 100%;
-                background-image: url(../assets/poster.jpg);
-                background-size: cover;
-                background-position: center;
-                transition: all 0.3s ease-in-out;
+                min-width:150px;
+                overflow: hidden;
+                background-color: rgb(50, 49, 49);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                    width: 100%;
+                    transition: all 0.3s ease-in-out;
+                    height: 100%;
+                    object-fit: cover;
+                    aspect-ratio: 1/1;
+                    transform-origin: center;
+                }
+            }
+            .card-logo{
+                position: absolute;
+                width: 30px;
+                right: 10px;
+                bottom: 10px;
+                opacity: 0.5;
             }
             .profile-details{
                 padding: 15px;
-                width: 14rem;
+                min-width: 55rem;
                 word-wrap: break-word;
-                position: relative;
+
                 .team-card-Name{
-                    font-size: 2rem;
+                    font-size: 1.3rem;
                     font-weight: bold;
                 }
                 .position{
-                    font-size: 1rem;
-                    margin-bottom: 1rem;
+                    font-size: 0.8rem;
+                    margin-bottom: 0.5rem;
+                }
+                .team-card-email,.team-card-phone{
+                    font-size: 0.7rem;
                 }
                 .follow{
                     background-color: orange;
@@ -601,13 +625,7 @@ nav{
                     color: black;
                     font-weight: bold;
                     margin-top: 10px;
-                }
-                img{
-                    position: absolute;
-                    width: 30px;
-                    right: 10px;
-                    bottom: 10px;
-                    opacity: 0.5;
+                    font-size: 0.7rem;
                 }
             }
         }
@@ -798,6 +816,11 @@ nav{
                     padding-bottom: 70px;
                 }
             }
+        }
+    }
+    .team-list{
+        .team-card-container{
+            flex: 0 0 80%;
         }
     }
   }

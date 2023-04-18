@@ -156,7 +156,7 @@
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4010.1394972468643!2d76.88961495525474!3d8.593305221907494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05bf691d0e4823%3A0x88e2ee192e7b0e0e!2sSt.%20Thomas%20Institute%20for%20Science%20%26%20Technology!5e0!3m2!1sen!2sin!4v1681807426918!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                     <div class="contact-wrapper">
-                        <form id="contact-form" class="form-horizontal" role="form">
+                        <form id="contact-form" class="form-horizontal" role="form" method="POST" action="https://formspree.io/f/xyyalzee">
                             <div class="form-group">
                                 <div class="contact-input">
                                     <input type="text" class="form-control" id="name" placeholder="NAME" name="name"
@@ -224,6 +224,28 @@
             speed: 10,
             lifeLike: false
         }).go();
+    </script>
+    <script>
+        const contactForm = document.getElementById('contact-form');
+        contactForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const formData = new FormData(contactForm);
+          const xhr = new XMLHttpRequest();
+          xhr.open('POST', contactForm.action);
+          xhr.setRequestHeader('Accept', 'application/json');
+          xhr.onreadystatechange = () => {
+            if (xhr.readyState !== XMLHttpRequest.DONE) return;
+            if (xhr.status === 200) {
+              contactForm.reset();
+              alert('Thanks for your message! We will get back to you soon.');
+            } else {
+              alert('Sorry, there was an error.');
+            }
+          };
+          xhr.send(formData);
+        });
+        
+          
     </script>
 </body>
 

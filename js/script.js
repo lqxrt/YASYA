@@ -13,6 +13,7 @@ window.onload = async function() {
 
 
 var eventData = []
+var proshowData = []
 var webTeamData = []
 var committeeData = []
 var councilData = []
@@ -44,6 +45,35 @@ fetch('https://opensheet.elk.sh/1pkr9AZjrWyBlnNfgdJe9I6Bd57tuyGlSaieBvZAx5TY/eve
     });
 
     eventList.innerHTML = eventCardList
+  })
+  .catch(error => console.error(error));
+
+  fetch('https://opensheet.elk.sh/1pkr9AZjrWyBlnNfgdJe9I6Bd57tuyGlSaieBvZAx5TY/proshow')
+  .then(response => response.json())
+  .then(data =>{
+    data.forEach(item => {
+      proshowData.push(item);
+    });
+
+    let proList = document.getElementById("proshow-list")
+    let proCardList = '';
+
+    proshowData.forEach(event => {
+      proCardList += `
+        <div class="event-list-item" data-aos="flip-left">
+          <div class="img-container">
+            <img src="./assets/posters/${event.poster}" alt="poster">
+            <div class="event-type">${event.type}</div>
+          </div>
+          <div class="event-details">
+            <h1>${event.name}</h1>
+            <p>${event.description}</p>
+          </div>
+        </div>
+      `;
+    });
+
+    proList.innerHTML = proCardList
   })
   .catch(error => console.error(error));
 

@@ -40,7 +40,9 @@
             <nav>
                 <div class="nav-container">
                     <div class="nav-icon">
-                        <img src="./assets/Yasya23.png" alt="logo">
+                        <a href="/">
+                            <img src="./assets/Yasya23.png" alt="logo">
+                        </a>
                     </div>
                     <div id="nav-options" class="nav-options">
                         <ul>
@@ -69,7 +71,7 @@
                 <div class="black-shadow"></div>
                 <div id="back-video" class="background-video">
                     <video poster="./assets/banner.jpg" plays inline autoplay muted loop>
-                    <source src="./assets/sparks.mp4" type="video/mp4">
+                        <source src="./assets/sparks.mp4" type="video/mp4">
                 </div>
             </div>
         </section>
@@ -95,21 +97,19 @@
                             <div class="label">Sec</div>
                         </div>
                     </div>
-                    <h1>Until the 
-                    <span class="fire">F</span>
-                    <span class="burn">i</span>
-                    <span class="burn">r</span>
-                    <span class="fire">e</span>
-                    sets</h1>
+                    <h1>Until the
+                        <span class="fire">F</span>
+                        <span class="burn">i</span>
+                        <span class="burn">r</span>
+                        <span class="fire">e</span>
+                        sets
+                    </h1>
                 </div>
             </div>
         </section>
         <section id="about">
-            <div class="about-container"
-            data-aos="fade-zoom-in"
-     data-aos-easing="ease-in-back"
-     data-aos-delay="300"
-     data-aos-offset="0">
+            <div class="about-container" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300"
+                data-aos-offset="0">
                 <img class="logo-light" src="./assets/logo-white.png" alt="">
                 <h2>About</h2>
                 <p id="about-content">
@@ -117,12 +117,12 @@
                     Technology.
 
                     In 2015, YASYA had its inception as an intra-college event. It then advanced to an inter-college
-                    cultural meet in 2017, follwing its humble beginnings. During the period between 2017 and 2019,
+                    cultural meet in 2017, following its humble beginnings. During the period between 2017 and 2019,
                     Yasya became embellished with various splendid events that integrated and motivated the diverse
                     shades of culture and art.
                     <br><br>
                     The success of these events can be attributed to the audience, and Yasya has been fortunate enough
-                    to have sppport of more than 50,000 people cheering it on.
+                    to have support of more than 50,000 people cheering it on.
                 </p>
             </div>
         </section>
@@ -130,6 +130,68 @@
             <div class="event-container">
                 <h2>Events</h2>
                 <div id="event-list" class="event-list"></div>
+                <h2>Pro Shows</h2>
+                <div id="proshow-list" class="event-list"></div>
+            </div>
+        </section>
+        <!-- <section id="contact">
+            <div class="contact-container">
+                <h2>Contact Us</h2>
+                <div class="contact-wrap">
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2822.7806761080233!2d-93.29138368446431!3d44.96844997909819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52b32b6ee2c87c91%3A0xc20dff2748d2bd92!2sWalker+Art+Center!5e0!3m2!1sen!2sus!4v1514524647889" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                    <div class="contact-info">
+                        <p>Phone : +91 97459 98850, Gowri Nandan R S, Fest Coordinator</p>
+                        <p>Email : info@yasya.org</p>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        <section id="contact">
+            <div class="contact-container">
+                <h2>Contact Us</h2>
+                <div class="map-container">
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4010.1394972468643!2d76.88961495525474!3d8.593305221907494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05bf691d0e4823%3A0x88e2ee192e7b0e0e!2sSt.%20Thomas%20Institute%20for%20Science%20%26%20Technology!5e0!3m2!1sen!2sin!4v1681807426918!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="contact-wrapper">
+                        <form id="contact-form" class="form-horizontal" role="form">
+                            <div class="form-group">
+                                <div class="contact-input">
+                                    <input type="text" class="form-control" id="name" placeholder="NAME" name="name"
+                                        value="" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="contact-input">
+                                    <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email"
+                                        value="" required>
+                                </div>
+                            </div>
+                            <div class="contact-input">
+                                <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message"
+                                    required></textarea>
+                            </div>
+                            <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
+                                <div class="alt-send-button">
+                                    <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
+                                </div>
+                            </button>
+                        </form>
+                        <div class="direct-contact-container">
+                            <ul class="contact-list">
+                                <li class="list-item"><i class="fa fa-map-marker fa-1x"><span
+                                            class="contact-text place">St. Thomas Institute for Science & Technology</span></i></li>
+                                <li class="list-item"><i class="fa fa-phone fa-1x"><span class="contact-text phone"><a
+                                                href="tel:1-212-555-5555" title="Give me a call">+91 97459 98850</a></span></i></li>
+                                <li class="list-item"><i class="fa fa-envelope fa-1x"><span class="contact-text gmail"><a
+                                                href="mailto:#" title="Send me an email">info@yasya.org</a></span></i>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <section>
@@ -146,7 +208,7 @@
                         <a href="#event">Event</a>
                         <a href="team.html">Team</a>
                     </p>
-                    <p><i class="fa fa-copyright"></i> 2023</p>
+                    <p>&copy; ALL OF THE RIGHTS RESERVED</p>
                 </div>
             </footer>
         </section>
@@ -158,8 +220,8 @@
     <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
     <script>
         AOS.init();
-        new TypeIt("#about-content",{
-            speed: 15,
+        new TypeIt("#about-content", {
+            speed: 10,
             lifeLike: false
         }).go();
     </script>

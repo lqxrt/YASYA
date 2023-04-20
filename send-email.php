@@ -5,7 +5,7 @@ $email = $_POST['email'];
 $message = $_POST['message'];
 
 // Create the email message
-$to = 'sivaprasadshines43@gmail.com'; // Replace with your own email address
+$to = 'info@yasya.org'; // Replace with your own email address
 $subject = 'New Contact Form Submission';
 $body = "Name: $name\nEmail: $email\nMessage:\n$message";
 
